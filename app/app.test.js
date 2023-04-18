@@ -56,6 +56,17 @@ describe("Post Endpoints", () => {
       });
     expect(res.statusCode).toEqual(200);
   });
+  it("it should raise an error code 500", async () => {
+    const res = await request(app)
+      .post("/put_entreprise")
+      .send({
+        item: {
+          name: "McKenzie-Waters",
+          sector: "Retail",
+        },
+      });
+    expect(res.statusCode).toEqual(500);
+  });
   it("it should query for entrepries on year-ca-index", async () => {
     const res = await request(app).post("/ca_query").send({
       IndexName: "year-ca-index",
