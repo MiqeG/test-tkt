@@ -27,7 +27,7 @@ module.exports.get_entreprise = async (siren, year) => {
     })
     .promise();
 };
-//PUT EXPECTS item = dataVerificationModel
+//PUT EXPECTS item to be dataVerificationModel compliant
 module.exports.put = async (item) => {
   if (!verifyData(item, dataVerificationModel))
     throw new Error("Bad Entreprise Data Format");

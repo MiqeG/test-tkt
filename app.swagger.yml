@@ -1,0 +1,159 @@
+openapi: 3.0.3
+
+info:
+  title: test-tkt
+  description: test tkt recrutement
+  version: 1.0.0
+  contact:
+    name: Mihai Ghilescu
+    email: mghilescu@protonmail.com
+servers:
+  - url: "localhowt:3000"
+    description: "localhost"
+
+paths:
+  /get_entreprise:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                year:
+                  type: number
+                siren:
+                  type: number
+              required:
+                - year
+                - siren
+        required: true
+      responses:
+        "200":
+          description: Successful operation
+        "500":
+          description: Server exception
+  /ca_query:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                year:
+                  type: number
+                high:
+                  type: number
+                low:
+                  type: number
+                Limit:
+                  type: number
+                ScanIndexForward:
+                  type: boolean
+                LastEvaluatedKey:
+                  type: object
+              required:
+                - year
+                - high
+                - low
+        required: true
+      responses:
+        "200":
+          description: Successful operation
+        "500":
+          description: Server exception
+  /compare_entreprise:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: number
+                LastEvaluatedKey:
+                  type: object
+              required:
+                - name
+        required: true
+      responses:
+        "200":
+          description: Successful operation
+        "500":
+          description: Server exception
+  /put_enreprise:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                item:
+                  type: object
+              required:
+                - item
+        required: true
+      responses:
+        "200":
+          description: Successful operation
+        "500":
+          description: Server exception
+  /query_entreprise:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                IndexName:
+                  type: string
+                ScanIndexForward:
+                  type: boolean
+                KeyConditionExpression:
+                  type: string
+                ExpressionAttributeNames:
+                  type: object
+                ExpressionAttributeValues:
+                  type: object
+                Limit:
+                  type: number
+                LastEvaluatedKey:
+                  type: object
+              required:
+                - IndexName
+                - KeyConditionExpression
+                - ExpressionAttributeNames
+                - ExpressionAttributeValues
+        required: true
+      responses:
+        "200":
+          description: Successful operation
+        "500":
+          description: Server exception
+  /scan:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                FilterExpression:
+                  type: string
+                ExpressionAttributeNames:
+                  type: object
+                ExpressionAttributeValues:
+                  type: object
+                Limit:
+                  type: number
+                LastEvaluatedKey:
+                  type: object
+      responses:
+        "200":
+          description: Successful operation
+        "500":
+          description: Server exception
