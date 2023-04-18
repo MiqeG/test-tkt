@@ -5,7 +5,7 @@ info:
   description: test tkt recrutement
   version: 1.0.0
 servers:
-  - url: "localhowt:3000"
+  - url: "localhost:3000"
     description: "localhost"
 
 paths:
