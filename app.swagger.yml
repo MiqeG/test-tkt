@@ -4,9 +4,6 @@ info:
   title: test-tkt
   description: test tkt recrutement
   version: 1.0.0
-  contact:
-    name: Mihai Ghilescu
-    email: mghilescu@protonmail.com
 servers:
   - url: "localhowt:3000"
     description: "localhost"
