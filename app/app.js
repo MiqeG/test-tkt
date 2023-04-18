@@ -11,7 +11,7 @@ const put_entreprise = require("./dist/routes/put_entreprise");
 const scan_entreprise = require("./dist/routes/scan_entreprise");
 const compare_entreprise = require("./dist/routes/compare_entreprise");
 const query_entreprise = require("./dist/routes/query_entreprise");
-const ca_query = require("./dist/routes/ca_query");
+const ca_query = require("./dist/routes/low_high_query");
 
 //GET ROUTES
 
