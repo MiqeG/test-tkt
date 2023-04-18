@@ -59,6 +59,7 @@ function verifyData(item, model) {
   }
   return true;
 }
+//DynamoDb Table creation : be sure to have AWS Cretentials and IAM Authorizations
 module.exports.create = async function () {
   try {
     return await dynamoDb.createTable(params).promise();
