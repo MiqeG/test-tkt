@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "aws-sdk": "^2.1360.0",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "supertest": "^6.3.3"
+  },
+  "name": "test-tkt",
+  "description": "test tkt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "create_table": "cd db_mock && node create_table",
+    "fill_table": "cd db_mock && node fill_data_base",
+    "start": "node index"
+  },
+  "author": "mgg",
+  "license": "ISC",
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  }
+}
