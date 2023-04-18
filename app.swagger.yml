@@ -30,7 +30,7 @@ paths:
           description: Successful operation
         "500":
           description: Server exception
-  /ca_query:
+  /high_low_query:
     post:
       requestBody:
         content:

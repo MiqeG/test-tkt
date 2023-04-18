@@ -11,7 +11,7 @@ const put_entreprise = require("./dist/routes/put_entreprise");
 const scan_entreprise = require("./dist/routes/scan_entreprise");
 const compare_entreprise = require("./dist/routes/compare_entreprise");
 const query_entreprise = require("./dist/routes/query_entreprise");
-const ca_query = require("./dist/routes/low_high_query");
+const high_low_query = require("./dist/routes/low_high_query");
 
 //GET ROUTES
 
@@ -36,8 +36,8 @@ app.post("/query_entreprise", (req, res) => {
 app.post("/compare_entreprise", (req, res) => {
   return compare_entreprise(req, res);
 });
-app.post("/ca_query", (req, res) => {
-  return ca_query(req, res);
+app.post("/high_low_query", (req, res) => {
+  return high_low_query(req, res);
 });
 
 //404

@@ -68,7 +68,7 @@ describe("Post Endpoints", () => {
     expect(res.statusCode).toEqual(500);
   });
   it("it should query for entrepries on year-ca-index", async () => {
-    const res = await request(app).post("/ca_query").send({
+    const res = await request(app).post("/high_low_query").send({
       IndexName: "year-ca-index",
       hash: "year",
       range: "ca",
