@@ -58,6 +58,9 @@ describe("Post Endpoints", () => {
   });
   it("it should query for entrepries on year-ca-index", async () => {
     const res = await request(app).post("/ca_query").send({
+      IndexName: "year-ca-index",
+      hash: "year",
+      range: "ca",
       high: 100000,
       low: 0,
       year: 2017,

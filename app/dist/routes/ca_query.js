@@ -4,12 +4,12 @@ module.exports = async function (req, res) {
   try {
     return res.json(
       await db.query({
-        IndexName: "year-ca-index",
+        IndexName: req.body.IndexName,
         ScanIndexForward: req.body.ScanIndexForward,
-        KeyConditionExpression: "#year = :y AND #ca BETWEEN :low  AND :high",
+        KeyConditionExpression: "#hash = :y AND #range BETWEEN :low  AND :high",
         ExpressionAttributeNames: {
-          "#ca": "ca",
-          "#year": "year",
+          "#range": req.body.range,
+          "#hash": req.body.hash,
         },
         ExpressionAttributeValues: {
           ":high": req.body.high,
